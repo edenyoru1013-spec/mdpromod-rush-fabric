@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "mdpromod",
+  "version": "${version}",
+  "name": "MDProMod Fabric",
+  "description": "Yu-Gi-Oh! duels powered by ocgcore and WindBot inside Minecraft, ported to Fabric.",
+  "authors": ["MDProMod", "Fabric port contributors"],
+  "contact": {
+    "homepage": "https://github.com/hailam0314-cell/MDProMod",
+    "sources": "https://github.com/hailam0314-cell/MDProMod"
+  },
+  "license": "GPL-3.0-or-later",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.mdpromod.MDProMod"],
+    "client": ["net.mdpromod.MDProModClient"]
+  },
+  "mixins": [
+    "mdpromod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "1.20.1",
+    "java": ">=17",
+    "fabric-api": ">=0.92.0"
+  }
+}
