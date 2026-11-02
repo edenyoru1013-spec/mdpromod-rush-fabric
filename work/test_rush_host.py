@@ -15,13 +15,13 @@ HOST = os.environ.get(
 )
 ROOT = os.environ.get(
     "MDPRO_RUSH_ROOT",
-    r"D:\QQ\聊天数据\pcl\.minecraft\versions\1.20.1-Fabric 0.16.14\mdpromod\runtime",
+    r"D:\QQ\聊天数据\pcl\.minecraft\versions\1.20.1-Fabric 0.16.14\mdpromod\rush-runtime",
 )
 DECK = os.environ.get(
     "MDPRO_RUSH_DECK",
-    r"D:\codexdate\2026-10-30\zhe\work\rush-invest\RushDemo.ydk",
+    r"D:\codexdate\2026-10-30\zhe\work\rush-invest\RDRushDemo.ydk",
 )
-SEED = int(os.environ.get("MDPRO_RUSH_SEED", "0"))
+SEED = int(os.environ.get("MDPRO_RUSH_SEED", "12345"))
 OPTIONS_TEXT = os.environ.get("MDPRO_RUSH_OPTIONS")
 OPTIONS = int(OPTIONS_TEXT, 0) if OPTIONS_TEXT is not None else 0
 
@@ -197,7 +197,7 @@ def main():
             and rush_bootstrap is not None
             and max(summons_by_turn, default=0) >= 2
             and len(draw_cards_by_turn) > 1
-            and draw_cards_by_turn[0] == 10
+            and draw_cards_by_turn[0] == 8
             and draw_cards_by_turn[1] == 1
             and not any(2 in phases for phases in phases_by_turn)
             and not any(16 in phases for phases in phases_by_turn)
